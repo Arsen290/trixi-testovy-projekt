@@ -16,6 +16,10 @@ public class Obec {
         this.name = name;
     }
 
+    public Obec() {
+
+    }
+
     public int getCode() {
         return code;
     }

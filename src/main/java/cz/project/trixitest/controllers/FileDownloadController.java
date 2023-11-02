@@ -1,7 +1,9 @@
 package cz.project.trixitest.controllers;
 
 
+import cz.project.trixitest.services.DataTransferService;
 import cz.project.trixitest.services.FileProcessingService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
@@ -17,8 +19,11 @@ import java.net.URL;
 
 @Controller
 public class FileDownloadController {
+
     @Autowired
     private FileProcessingService fileProcessingService;
+    @Autowired
+    private DataTransferService dataTransferService;
 
     final String downloadUrl = "https://www.smartform.cz/download/kopidlno.xml.zip";
 
@@ -42,7 +47,7 @@ public class FileDownloadController {
         }
     // Unzip
     fileProcessingService.unpackingArchive();
-
-    fileProcessingService.unparsingXMLFile();
+    //Transfer
+    dataTransferService.unparsingXMLFile();
     }
 }
