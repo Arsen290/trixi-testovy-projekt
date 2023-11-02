@@ -17,6 +17,9 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
+/**
+ * This class represents a service for transferring data and parsing XML files.
+ */
 @Service
 public class DataTransferService {
 
@@ -30,7 +33,7 @@ public class DataTransferService {
     }
 
     public void unparsingXMLFile() throws IOException {
-        Path root = Paths.get(""); // Оставляем пустую строку для использования текущей директории проекта
+        Path root = Paths.get("");
         //Search .xml files in directory
         Files.walk(root).filter(Files::isRegularFile).filter(path -> path.getFileName().toString().endsWith(".xml")).forEach(xmlFile -> {
             try {

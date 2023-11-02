@@ -17,6 +17,9 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.URL;
 
+/**
+ * This class represents a controller for downloading files, processing them, and transferring data.
+ */
 @Controller
 public class FileDownloadController {
 
@@ -27,7 +30,7 @@ public class FileDownloadController {
 
     final String downloadUrl = "https://www.smartform.cz/download/kopidlno.xml.zip";
 
-    @GetMapping("/download") // Обратите внимание на URL-путь "/download"
+    @GetMapping("/download")
     @ResponseStatus(HttpStatus.NO_CONTENT)
 
     public void downloadFile() throws IOException {

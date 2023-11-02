@@ -10,6 +10,9 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 import java.io.FileOutputStream;
 
+/**
+ * This class represents a service for processing files, including unzipping archives.
+ */
 @Service
 public class FileProcessingService {
     String zipFileName = "kopidlno.xml.zip";
@@ -37,6 +40,5 @@ public class FileProcessingService {
             System.out.println(ex.getMessage());
         }
     }
-
 
 }
