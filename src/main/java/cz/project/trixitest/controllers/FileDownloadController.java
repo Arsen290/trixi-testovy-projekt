@@ -24,7 +24,7 @@ public class FileDownloadController {
 
     @GetMapping("/download") // Обратите внимание на URL-путь "/download"
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void downloadFile() {
+    public void downloadFile() throws IOException {
         try {
             URL url = new URL(downloadUrl);
             try (BufferedInputStream in = new BufferedInputStream(url.openStream());
@@ -40,6 +40,6 @@ public class FileDownloadController {
         }
     // Unzip
     fileProcessingService.unpackingArchive();
-
+    fileProcessingService.unparsingXMLFile();
     }
 }
