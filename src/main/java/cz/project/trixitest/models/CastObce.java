@@ -1,6 +1,13 @@
 package cz.project.trixitest.models;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "partlocation")
 public class CastObce {
+    @Id
     private int code; // Code of the part locality
     private String name;
     private int obecCode; // Code of the locality
