@@ -45,9 +45,9 @@ public class FileDownloadController {
         } catch (IOException e) {
             e.printStackTrace();
         }
-    // Unzip
-    fileProcessingService.unpackingArchive();
-    //Transfer
-    dataTransferService.unparsingXMLFile();
+        // Unzip
+        fileProcessingService.unpackingArchive();
+        //Transfer
+        dataTransferService.unparsingXMLFile();
     }
 }

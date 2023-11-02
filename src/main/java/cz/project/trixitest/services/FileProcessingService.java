@@ -15,11 +15,10 @@ public class FileProcessingService {
     String zipFileName = "kopidlno.xml.zip";
 
     // Unzip file to XML
-    public void unpackingArchive(){
-        try(ZipInputStream zin = new ZipInputStream(new FileInputStream(zipFileName)))
-        {
+    public void unpackingArchive() {
+        try (ZipInputStream zin = new ZipInputStream(new FileInputStream(zipFileName))) {
             ZipEntry entry;
-            while((entry=zin.getNextEntry())!=null){
+            while ((entry = zin.getNextEntry()) != null) {
                 String fileName = entry.getName();
                 FileOutputStream fout = new FileOutputStream(fileName);
 
@@ -34,13 +33,10 @@ public class FileProcessingService {
                 zin.closeEntry();
                 fout.close();
             }
-        }
-        catch(Exception ex){
+        } catch (Exception ex) {
             System.out.println(ex.getMessage());
         }
     }
-
-
 
 
 }
