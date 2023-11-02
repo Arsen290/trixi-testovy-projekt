@@ -24,11 +24,9 @@ public class FileDownloadController {
 
     @GetMapping("/download") // Обратите внимание на URL-путь "/download"
     @ResponseStatus(HttpStatus.NO_CONTENT)
-<<<<<<< HEAD
+
     public void downloadFile() throws IOException {
-=======
-    public void downloadFile() {
->>>>>>> ef865d5 (Test)
+
         try {
             URL url = new URL(downloadUrl);
             try (BufferedInputStream in = new BufferedInputStream(url.openStream());
@@ -44,10 +42,7 @@ public class FileDownloadController {
         }
     // Unzip
     fileProcessingService.unpackingArchive();
-<<<<<<< HEAD
-    fileProcessingService.unparsingXMLFile();
-=======
 
->>>>>>> ef865d5 (Test)
+    fileProcessingService.unparsingXMLFile();
     }
 }

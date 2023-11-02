@@ -1,6 +1,5 @@
 package cz.project.trixitest.services;
 
-<<<<<<< HEAD
 import cz.project.trixitest.models.CastObce;
 import cz.project.trixitest.models.Obec;
 import org.springframework.stereotype.Service;
@@ -16,11 +15,9 @@ import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-=======
 import org.springframework.stereotype.Service;
 
 import java.io.FileInputStream;
->>>>>>> ef865d5 (Test)
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 import java.io.FileOutputStream;
@@ -54,7 +51,6 @@ public class FileProcessingService {
         }
     }
 
-<<<<<<< HEAD
     public void unparsingXMLFile() throws IOException {
         Path root = Paths.get(""); // Оставляем пустую строку для использования текущей директории проекта
         //Search .xml files in directory
@@ -121,6 +117,4 @@ public class FileProcessingService {
 
     }
 
-=======
->>>>>>> ef865d5 (Test)
 }
